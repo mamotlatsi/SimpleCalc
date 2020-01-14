@@ -5,22 +5,29 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SimpleCalculatorTest {
 
     @Test
-    void testAddition(){
-        assertEquals(20, SimpleCalculator.add(4,2,6,8));
+    void testAdd(){
+        assertEquals(15, SimpleCalculator.add(1,2,3,4,5));
+        {
+            assertEquals(4, SimpleCalculator.add(1,3));
+        }
+        {
+            assertEquals(-2, SimpleCalculator.add(-1,-1));
+        }
+
     }
 
-    @Test
-    void testAddition2(){
-        assertEquals(9, SimpleCalculator.add(3,6));
-    }
     @Test
     void testMulti(){
-        assertEquals(11412, SimpleCalculator.multiplication(1902,6));
+        assertEquals(120, SimpleCalculator.multiplication(1,2,3,4,5));
+        {
+            assertEquals(3, SimpleCalculator.multiplication(1, 3));
+            {
+
+            }
+                assertEquals(-3, SimpleCalculator.multiplication(-1, 3));
+            }
     }
 
-    @Test
-    void testMulti2(){
-        assertEquals(36, SimpleCalculator.multiplication(2,2,3,3));
-    }
+
 
 }
